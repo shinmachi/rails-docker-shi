@@ -2,6 +2,19 @@
 * githubにプロジェクトを作成
   * 最小限のファイルから始める
 * railsをローカルで立ち上げる
+  * docker-compose run web rails new . --force --database=mysql
+      * rm src/.gitignore
+      * rm src/.gitattributes
+      * rm -rf src/.git
+      * まちがえてmysql_dataも管理してしまったので、管理から外す
+      * git rm -r --cached src/db/mysql_data
+  * docker-compose build 
+  * modified database.yml  
+  * docker-compose run web rails db:create
+  * docker-compose up 
+* Hello world!を表示させる
+  * docker-compose exec web bundle exec rails g controller users
+  * ルーティングの設定 routes.rb 
 * herokuで正常動作させる
 * circleciで、CIを動作させる
 * circleciで、CDを動作させる
@@ -13,9 +26,6 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.0'
 ```
 
-docker-compose run web rails new . --force --database=mysql
-docker-compose build 
-docker-compose run web rails db:create
 
 
 事前準備 
