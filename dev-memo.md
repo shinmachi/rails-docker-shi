@@ -6,6 +6,8 @@
       * rm src/.gitignore
       * rm src/.gitattributes
       * rm -rf src/.git
+      * まちがえてmysql_dataも管理してしまったので、管理から外す
+      * git rm -r --cached src/db/mysql_data
   * docker-compose build 
   * docker-compose run web rails db:create
 * herokuで正常動作させる
