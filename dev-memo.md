@@ -77,7 +77,7 @@
     * hostに APP_DATABASE_HOST,なければdb
   * 環境変数を設定
     * rails master keyを環境変数として追加
-    * $ heroku config:add RAILS_MSTER_KEY='f0c4bf769...' -a rails-docker-shin
+    * $ heroku config:add RAILS_MASTER_KEY='f0c4bf769...' -a rails-docker-shin
 * circleciで、CDを動作させる
   * configを修正
     * jobsに、deployを追加
@@ -85,9 +85,9 @@
     * HEROKU_APP_NAME
     * HEROKU_APP_KEY
   * Viewファイルを修正
-    * 
   * GitHubにプッシュ
   * マージ、デプロイ
+    * => Hello world!!!!
 
 ## テストを実行した時の挙動
 原因はよくわかっていない
@@ -110,6 +110,13 @@ Run options: --seed 63488
 $ docker buildx build . --platform linux/amd64 -t d.shinmachi/rails-docker-dik:latest
 ```
 
+### Heroku configu 解除
+
+変数名を間違えた場合
+
+```
+$ heroku config:unset RAILS_MSTER_KYE -a rails-docker-shin
+```
 
 # 初期のGemfileの内容
 ```
