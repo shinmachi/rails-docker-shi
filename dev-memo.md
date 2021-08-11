@@ -9,7 +9,12 @@
       * まちがえてmysql_dataも管理してしまったので、管理から外す
       * git rm -r --cached src/db/mysql_data
   * docker-compose build 
+  * modified database.yml  
   * docker-compose run web rails db:create
+  * docker-compose up 
+* Hello world!を表示させる
+  * docker-compose exec web bundle exec rails g controller users
+  * ルーティングの設定 routes.rb 
 * herokuで正常動作させる
 * circleciで、CIを動作させる
 * circleciで、CDを動作させる
