@@ -79,6 +79,15 @@
     * rails master keyを環境変数として追加
     * $ heroku config:add RAILS_MSTER_KEY='f0c4bf769...' -a rails-docker-shin
 * circleciで、CDを動作させる
+  * configを修正
+    * jobsに、deployを追加
+  * 環境変数を設定
+    * HEROKU_APP_NAME
+    * HEROKU_APP_KEY
+  * Viewファイルを修正
+    * 
+  * GitHubにプッシュ
+  * マージ、デプロイ
 
 ## テストを実行した時の挙動
 原因はよくわかっていない
