@@ -73,8 +73,11 @@
       * curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | bash
     * config.ymlのバリデーション
       * circleci config validate
-    * 
-  ## 環境変数を設定
+  * database.ymlを修正
+    * hostに APP_DATABASE_HOST,なければdb
+  * 環境変数を設定
+    * rails master keyを環境変数として追加
+    * $ heroku config:add RAILS_MSTER_KEY='f0c4bf769...' -a rails-docker-shin
 * circleciで、CDを動作させる
 
 ## テストを実行した時の挙動
