@@ -2,6 +2,12 @@
 * githubにプロジェクトを作成
   * 最小限のファイルから始める
 * railsをローカルで立ち上げる
+  * docker-compose run web rails new . --force --database=mysql
+      * rm src/.gitignore
+      * rm src/.gitattributes
+      * rm -rf src/.git
+  * docker-compose build 
+  * docker-compose run web rails db:create
 * herokuで正常動作させる
 * circleciで、CIを動作させる
 * circleciで、CDを動作させる
@@ -13,9 +19,6 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.0'
 ```
 
-docker-compose run web rails new . --force --database=mysql
-docker-compose build 
-docker-compose run web rails db:create
 
 
 事前準備 
